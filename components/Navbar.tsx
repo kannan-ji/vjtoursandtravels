@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { HERO_CONTENT, NAV_LINKS, WHATSAPP_LINKS } from '@/lib/vjtours-data';
+import SectionLink from './SectionLink';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -11,23 +13,23 @@ export default function Navbar() {
     <header className="relative md:sticky md:top-0 z-40 border-b border-[#E2DFD7] bg-[#F7F6F2]/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-6 py-4 lg:px-10">
         {/* Zone 1: Single-line Brand Wordmark */}
-        <a
+        <SectionLink
           href="#hero"
           className="font-display text-lg font-semibold tracking-tight text-[#141A17] whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0D6E4E]"
         >
           {HERO_CONTENT.brandHeader}
-        </a>
+        </SectionLink>
 
         {/* Zone 2: 4 Clean Single-Line Navigation Links */}
         <nav aria-label="Primary Navigation" className="hidden md:flex items-center gap-7">
           {NAV_LINKS.map((link) => (
-            <a
+            <SectionLink
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-[#4E5953] transition-colors duration-150 hover:text-[#141A17] hover:underline hover:underline-offset-8 decoration-[#0D6E4E] decoration-2 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0D6E4E]"
             >
               {link.label}
-            </a>
+            </SectionLink>
           ))}
         </nav>
 
@@ -37,9 +39,10 @@ export default function Navbar() {
             href={WHATSAPP_LINKS.headerContact}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center justify-center rounded-sm bg-[#0D6E4E] px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#09543B] whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D6E4E]"
+            className="hidden sm:inline-flex items-center justify-center gap-2 rounded-sm bg-[#0D6E4E] px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#09543B] whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D6E4E]"
           >
-            Contact Us
+            <WhatsAppIcon className="h-4 w-4 shrink-0" />
+            <span>Contact Us</span>
           </a>
 
           <button
@@ -64,13 +67,13 @@ export default function Navbar() {
           <ul className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a
+                <SectionLink
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className="flex min-h-[44px] items-center border-b border-[#E2DFD7]/70 text-base font-medium text-[#141A17] transition-colors hover:text-[#0D6E4E]"
                 >
                   {link.label}
-                </a>
+                </SectionLink>
               </li>
             ))}
             <li className="pt-3">
@@ -79,9 +82,10 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
-                className="flex min-h-[44px] w-full items-center justify-center rounded-sm bg-[#0D6E4E] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#09543B]"
+                className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-sm bg-[#0D6E4E] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#09543B]"
               >
-                Contact Us
+                <WhatsAppIcon className="h-4 w-4 shrink-0" />
+                <span>Contact Us</span>
               </a>
             </li>
           </ul>

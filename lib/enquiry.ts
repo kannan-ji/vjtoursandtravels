@@ -66,11 +66,3 @@ export function buildWhatsAppEnquiryUrl(
   const text = encodeURIComponent(formatEnquiryMessage(values));
   return `https://wa.me/${targetNumber}?text=${text}`;
 }
-
-export function buildPackagePrefill(duration: string, title: string, route: string): string {
-  return `Enquiring about ${duration} ${title} (${route}). Please share seasonal quote and availability.`;
-}
-
-export function buildVehiclePrefill(name: string, passengers: string): string {
-  return `Enquiring about booking the ${name} (${passengers}). Please share availability and rates.`;
-}

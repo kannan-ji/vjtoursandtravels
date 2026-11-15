@@ -39,7 +39,7 @@ jobs:
           fi
 
       - name: Run unit tests
-        run: npx --yes tsx --test lib/enquiry.test.ts
+        run: npx --yes tsx --test lib/enquiry.test.ts lib/carousel.test.ts lib/navigation.test.ts
 
       - name: Build static export for GitHub Pages
         env:

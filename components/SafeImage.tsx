@@ -42,6 +42,7 @@ export default function SafeImage({
       alt={alt}
       fill
       priority={priority}
+      loading={priority ? undefined : 'eager'}
       sizes={sizes}
       referrerPolicy="no-referrer"
       className={className}

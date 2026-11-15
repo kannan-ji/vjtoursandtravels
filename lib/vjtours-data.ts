@@ -1,11 +1,17 @@
+export interface PackagePhoto {
+  key: 'munnarTea' | 'houseboat' | 'waterfalls' | 'jatayu';
+  alt: string;
+  caption: string;
+}
+
 export interface TourPackage {
   id: string;
   duration: string;
+  distanceKm: string;
   route: string;
   title: string;
   highlights: string[];
-  imageAlt: string;
-  imageKey: 'munnarHeritage' | 'classicKerala';
+  photos: [PackagePhoto, PackagePhoto];
 }
 
 export interface FleetVehicle {
@@ -15,7 +21,7 @@ export interface FleetVehicle {
   passengers: string;
   luggage: string;
   features: string[];
-  imageKey: 'wagonr' | 'dzire' | 'ertiga';
+  imageKey: 'wagonr' | 'ertiga';
 }
 
 export interface TestimonialItem {
@@ -58,7 +64,7 @@ export const HERO_CONTENT = {
 } as const;
 
 export const KEY_STATS = [
-  { value: '3', label: 'Own vehicles' },
+  { value: '2', label: 'Own vehicles' },
   { value: '15 min', label: 'From Cochin Airport' },
   { value: '24/7', label: 'Support' },
   { value: '10+', label: 'Years on the road' },
@@ -67,6 +73,7 @@ export const KEY_STATS = [
 export const PACKAGES_SECTION = {
   title: 'Kerala Packages',
   subtitle: 'Rates vary by season. Message us for a quote.',
+  guestNote: 'Entry tickets are paid directly by guests. Rooms arranged on request; rates vary by season.',
   customCalloutTitle: 'Want something different? Tell us your dates and interests.',
   customCalloutBody:
     'We craft fully customizable day-wise plans for families, honeymooners, and corporate teams.',
@@ -75,34 +82,57 @@ export const PACKAGES_SECTION = {
 
 export const TOUR_PACKAGES: TourPackage[] = [
   {
-    id: 'munnar-tea-valley',
-    duration: '3N / 4D',
-    route: 'COCHIN → MUNNAR → COCHIN',
-    title: 'Munnar Tea Valley & Cochin Heritage',
+    id: 'classic-munnar-backwaters',
+    duration: '5 Days / 4 Nights',
+    distanceKm: '550 km',
+    route: 'Kochi (1D) → Munnar (2D) → Thekkady (1D) → Alleppey (1D) → Kochi drop',
+    title: 'Classic Munnar & Backwaters',
     highlights: [
-      'Private AC chauffeur vehicle for entire tour',
-      'Munnar tea plantation & Mattupetty sightseeing',
-      'Cheeyappara & Valara waterfalls stops',
-      'Cochin Fort Kochi & colonial heritage tour',
-      'All toll gates, parking fees & driver allowances',
+      'Private AC chauffeur vehicle covering 550 km across the circuit',
+      'Kochi arrival sightseeing & Munnar (2D) tea estates, Mattupetty & viewpoints',
+      'Thekkady (1D) spice plantation & Periyar wildlife sanctuary transit',
+      'Alleppey (1D) backwater cruise / houseboat coordination',
+      'Seamless Kochi drop with toll gates, parking fees & driver allowances',
     ],
-    imageAlt: 'Munnar Tea Valley & Cochin Heritage',
-    imageKey: 'munnarHeritage',
+    photos: [
+      {
+        key: 'munnarTea',
+        alt: 'Lush Munnar tea estates and misty hills in Kerala',
+        caption: 'Munnar Tea Estates',
+      },
+      {
+        key: 'houseboat',
+        alt: 'Traditional Kerala houseboat on Alleppey backwaters',
+        caption: 'Alleppey Houseboat',
+      },
+    ],
   },
   {
-    id: 'classic-kerala-circuit',
-    duration: '4N / 5D',
-    route: 'COCHIN → MUNNAR → THEKKADY → ALLEPPEY',
-    title: 'Classic Kerala Circuit',
+    id: 'grand-kerala-kanyakumari',
+    duration: '9 Days / 8 Nights',
+    distanceKm: '1,300 km',
+    route:
+      'Kochi (1D) → Munnar (2D) → Thekkady (1D) → Alleppey (1D) → Jatayu & Varkala (2D) → Kovalam & Kanyakumari (2D) → Kochi drop',
+    title: 'Grand Kerala & Kanyakumari',
     highlights: [
-      'Private AC vehicle & experienced hill chauffeur',
-      'Munnar hill views & tea museum visit',
-      'Thekkady spice plantation & Periyar sanctuary transit',
-      'Alleppey backwater cruise / houseboat coordination',
-      'Zero hidden charges with transparent airport transfers',
+      'Private AC chauffeur vehicle covering the 1,300 km grand circuit',
+      'Kochi (1D), Munnar (2D) tea valleys & waterfalls, Thekkady (1D) & Alleppey (1D)',
+      "Jatayu Earth's Center & Varkala (2D) coastal cliffs sightseeing",
+      'Kovalam & Kanyakumari (2D) beaches, Triveni Sangam & sunset views',
+      'Dedicated Kochi drop with toll gates, parking fees & driver allowances',
     ],
-    imageAlt: 'Classic Kerala Circuit',
-    imageKey: 'classicKerala',
+    photos: [
+      {
+        key: 'waterfalls',
+        alt: 'Cascading waterfalls amidst lush green Kerala forest',
+        caption: 'Kerala Waterfalls',
+      },
+      {
+        key: 'jatayu',
+        alt: "Aerial view of Jatayu Earth's Center sculpture in Chadayamangalam, Kerala",
+        caption: "Jatayu Earth's Center",
+      },
+    ],
   },
 ];
 
@@ -124,15 +154,6 @@ export const FLEET_VEHICLES: FleetVehicle[] = [
     luggage: '2 small bags',
     features: ['AC', 'Compact Hatchback', 'Easy Ghats Transit'],
     imageKey: 'wagonr',
-  },
-  {
-    id: 'dzire',
-    segment: 'Small Families & Couples',
-    name: 'Dzire',
-    passengers: '4 passengers',
-    luggage: '2 large + 1 small suitcase',
-    features: ['AC', 'Comfortable Sedan', 'Generous Boot Space'],
-    imageKey: 'dzire',
   },
   {
     id: 'ertiga',
@@ -191,13 +212,13 @@ export const CONTACT_INFO = {
   email: 'vjtoursperumbavoor@gmail.com',
   socialLabel: 'Connect on Social Media',
   socials: [
-    { label: 'Instagram', href: 'https://instagram.com/' },
+    { label: 'Instagram', href: 'https://www.instagram.com/vj_travels_official_' },
     { label: 'Facebook', href: 'https://facebook.com/' },
   ],
   callLabel: 'Call us',
   phones: [
     { label: 'Call +91 70253 04620', href: 'tel:+917025304620', display: '+91 70253 04620' },
-    { label: 'Call +91 98470 54620', href: 'tel:+919847054620', display: '+91 98470 54620' },
+    { label: 'Call +91 70253 04775', href: 'tel:+917025304775', display: '+91 70253 04775' },
   ],
   formTitle: 'Enquiry',
   fields: {
@@ -216,5 +237,5 @@ export const FOOTER_CONTENT = {
   description:
     'Trusted local tour operator and chauffeur service based in Perumbavoor, Kerala.',
   copyright:
-    '© 2025 VJ Tours and Travels Perumbavoor. All rights reserved. Government of Kerala approved transport partner.',
+    '© 2026 VJ Tours and Travels Perumbavoor. All rights reserved.',
 } as const;

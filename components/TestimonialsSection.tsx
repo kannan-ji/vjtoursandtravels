@@ -5,7 +5,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="why-choose-us"
-      className="border-b border-[#1D2D27] bg-[#111C18] py-20 text-[#F7F6F2] lg:py-24"
+      className="scroll-mt-20 border-b border-[#1D2D27] bg-[#111C18] py-20 text-[#F7F6F2] lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         {/* Editorial Header */}
