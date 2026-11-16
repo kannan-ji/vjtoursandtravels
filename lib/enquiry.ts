@@ -1,4 +1,4 @@
-import { WHATSAPP_NUMBER } from './vjtours-data';
+import { WHATSAPP_NUMBER, type TourPackage } from './vjtours-data';
 
 export interface EnquiryFormValues {
   name: string;
@@ -64,5 +64,15 @@ export function buildWhatsAppEnquiryUrl(
   targetNumber: string = WHATSAPP_NUMBER,
 ): string {
   const text = encodeURIComponent(formatEnquiryMessage(values));
+  return `https://wa.me/${targetNumber}?text=${text}`;
+}
+
+export function buildPackageWhatsAppUrl(
+  pkg: Pick<TourPackage, 'title' | 'duration' | 'distanceKm' | 'route'>,
+  targetNumber: string = WHATSAPP_NUMBER,
+): string {
+  const text = encodeURIComponent(
+    `Hello VJ Tours and Travels, I would like to enquire about the ${pkg.title} package (${pkg.duration}, ${pkg.distanceKm} — ${pkg.route}).`,
+  );
   return `https://wa.me/${targetNumber}?text=${text}`;
 }

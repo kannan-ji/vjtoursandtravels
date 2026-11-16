@@ -37,11 +37,11 @@ export const WHATSAPP_NUMBER = '917025304620';
 
 export const WHATSAPP_LINKS = {
   headerContact:
-    'https://wa.me/917025304620?text=Hello%20VJ%20Tours%2C%20I%20would%20like%20to%20book%20a%20Chauffeur%20or%20Itinerary',
+    'https://wa.me/917025304620?text=Hello%20VJ%20Tours%2C%20I%20would%20like%20to%20book%20a%20Transport%20or%20Itinerary',
   heroPlan:
-    'https://wa.me/917025304620?text=Hello%20VJ%20Tours%2C%20I%20would%20like%20to%20plan%20my%20Kerala%20trip%20and%20request%20a%20chauffeur%20quote',
+    'https://wa.me/917025304620?text=Hello%20VJ%20Tours%2C%20I%20would%20like%20to%20plan%20my%20Keralam%20trip%20and%20request%20a%20transport%20quote',
   customPackage:
-    'https://wa.me/917025304620?text=Hello%20VJ%20Tours%2C%20I%20would%20like%20to%20customize%20my%20Kerala%20trip%20itinerary',
+    'https://wa.me/917025304620?text=Hello%20VJ%20Tours%2C%20I%20would%20like%20to%20customize%20my%20Keralam%20trip%20itinerary',
   customVehicle:
     'https://wa.me/917025304620?text=Hello%20VJ%20Tours%2C%20I%20would%20like%20to%20inquire%20about%20vehicle%20availability%20and%20rates',
 } as const;
@@ -57,10 +57,10 @@ export const HERO_CONTENT = {
   brandHeader: 'VJ TOURS & TRAVELS',
   headline: 'Your Trusted Keralam Travel & Holiday Partner',
   subheadline:
-    'Direct Dispatch from Perumbavoor Hub • 15 Mins from Cochin Airport (COK) • Zero Middlemen • 100% Owned Fleet & Hill-Certified Chauffeurs',
+    'Direct Dispatch from Perumbavoor Hub • 15 Mins from Cochin Airport (COK) • Zero Middlemen • 100% Owned Fleet & Hill-Certified Transport',
   primaryCta: 'Contact Us on WhatsApp',
   secondaryCta: 'Connect with Us',
-  imageAlt: 'Kerala VJ Tours and Travels',
+  imageAlt: 'Keralam VJ Tours and Travels',
 } as const;
 
 export const KEY_STATS = [
@@ -71,7 +71,7 @@ export const KEY_STATS = [
 ] as const;
 
 export const PACKAGES_SECTION = {
-  title: 'Kerala Packages',
+  title: 'Keralam Packages',
   subtitle: 'Rates vary by season. Message us for a quote.',
   guestNote: 'Entry tickets are paid directly by guests. Rooms arranged on request; rates vary by season.',
   customCalloutTitle: 'Want something different? Tell us your dates and interests.',
@@ -88,7 +88,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: 'Kochi (1D) → Munnar (2D) → Thekkady (1D) → Alleppey (1D) → Kochi drop',
     title: 'Classic Munnar & Backwaters',
     highlights: [
-      'Private AC chauffeur vehicle covering 550 km across the circuit',
+      'Private AC transport vehicle covering 550 km across the circuit',
       'Kochi arrival sightseeing & Munnar (2D) tea estates, Mattupetty & viewpoints',
       'Thekkady (1D) spice plantation & Periyar wildlife sanctuary transit',
       'Alleppey (1D) backwater cruise / houseboat coordination',
@@ -97,25 +97,25 @@ export const TOUR_PACKAGES: TourPackage[] = [
     photos: [
       {
         key: 'munnarTea',
-        alt: 'Lush Munnar tea estates and misty hills in Kerala',
+        alt: 'Lush Munnar tea estates and misty hills in Keralam',
         caption: 'Munnar Tea Estates',
       },
       {
         key: 'houseboat',
-        alt: 'Traditional Kerala houseboat on Alleppey backwaters',
+        alt: 'Traditional Keralam houseboat on Alleppey backwaters',
         caption: 'Alleppey Houseboat',
       },
     ],
   },
   {
-    id: 'grand-kerala-kanyakumari',
+    id: 'grand-keralam-kanyakumari',
     duration: '9 Days / 8 Nights',
     distanceKm: '1,300 km',
     route:
       'Kochi (1D) → Munnar (2D) → Thekkady (1D) → Alleppey (1D) → Jatayu & Varkala (2D) → Kovalam & Kanyakumari (2D) → Kochi drop',
-    title: 'Grand Kerala & Kanyakumari',
+    title: 'Grand Keralam & Kanyakumari',
     highlights: [
-      'Private AC chauffeur vehicle covering the 1,300 km grand circuit',
+      'Private AC transport vehicle covering the 1,300 km grand circuit',
       'Kochi (1D), Munnar (2D) tea valleys & waterfalls, Thekkady (1D) & Alleppey (1D)',
       "Jatayu Earth's Center & Varkala (2D) coastal cliffs sightseeing",
       'Kovalam & Kanyakumari (2D) beaches, Triveni Sangam & sunset views',
@@ -124,12 +124,12 @@ export const TOUR_PACKAGES: TourPackage[] = [
     photos: [
       {
         key: 'waterfalls',
-        alt: 'Cascading waterfalls amidst lush green Kerala forest',
-        caption: 'Kerala Waterfalls',
+        alt: 'Cascading waterfalls amidst lush green Keralam forest',
+        caption: 'Keralam Waterfalls',
       },
       {
         key: 'jatayu',
-        alt: "Aerial view of Jatayu Earth's Center sculpture in Chadayamangalam, Kerala",
+        alt: "Aerial view of Jatayu Earth's Center sculpture in Chadayamangalam, Keralam",
         caption: "Jatayu Earth's Center",
       },
     ],
@@ -202,11 +202,11 @@ export const TESTIMONIALS: TestimonialItem[] = [
 ];
 
 export const CONTACT_INFO = {
-  heading: 'Plan your Kerala trip with us',
+  heading: 'Plan your Keralam trip with us',
   subheading:
     'Reach us directly or drop an enquiry. We operate round-the-clock from our Perumbavoor hub.',
   businessName: 'VJ Tours and Travels',
-  address: 'Main Central Road (MC Road), Perumbavoor, Ernakulam District, Kerala – 683542',
+  address: 'Main Central Road (MC Road), Perumbavoor, Ernakulam District, Keralam – 683542',
   airportNote: '15 minutes from Cochin International Airport (COK)',
   emailLabel: 'EMAIL US',
   email: 'vjtoursperumbavoor@gmail.com',
@@ -235,7 +235,7 @@ export const CONTACT_INFO = {
 export const FOOTER_CONTENT = {
   brand: 'VJ TOURS AND TRAVELS',
   description:
-    'Trusted local tour operator and chauffeur service based in Perumbavoor, Kerala.',
+    'Trusted local tour operator and transport service based in Perumbavoor, Keralam.',
   copyright:
-    '© 2026 VJ Tours and Travels Perumbavoor. All rights reserved.',
+    '© 2026 VJ Tours and Travels. All rights reserved.',
 } as const;

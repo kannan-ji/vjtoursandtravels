@@ -30,7 +30,6 @@ export default function VehiclesSection() {
               {VEHICLES_SECTION.title}
             </h2>
           </div>
-          <p className="text-sm text-[#4E5953] sm:text-base">{VEHICLES_SECTION.subtitle}</p>
         </div>
 
         {/* 2 Owned Vehicles Ledger Grid (WagonR & Ertiga) */}

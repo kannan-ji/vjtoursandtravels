@@ -18,11 +18,6 @@ export default function TestimonialsSection() {
               {TESTIMONIALS_SECTION.title}
             </h2>
           </div>
-
-          <div className="flex items-center gap-2 text-sm font-medium text-[#E5E2D9] tabular-nums">
-            <Star className="h-4 w-4 fill-[#D4A359] text-[#D4A359]" aria-hidden="true" />
-            <span>{TESTIMONIALS_SECTION.ratingLabel}</span>
-          </div>
         </div>
 
         {/* 3-Column Editorial Quote Grid */}

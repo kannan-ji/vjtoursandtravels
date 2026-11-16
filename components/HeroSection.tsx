@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import vjHero1 from '@/src/assets/images/vj-hero-1.jpg';
 import vjHero2 from '@/src/assets/images/vj-hero-2.jpg';
 import vjHero3 from '@/src/assets/images/vj-hero-3.jpg';
 import vjHero4 from '@/src/assets/images/vj-hero-4.jpg';
 import vjHero5 from '@/src/assets/images/vj-hero-5.jpg';
-import { formatSlideCounter, getNextSlideIndex, getPrevSlideIndex } from '@/lib/carousel';
+import { getNextSlideIndex } from '@/lib/carousel';
 import { HERO_CONTENT, KEY_STATS, WHATSAPP_LINKS } from '@/lib/vjtours-data';
 import SafeImage from './SafeImage';
 import SectionLink from './SectionLink';
@@ -18,31 +18,31 @@ const HERO_SLIDES = [
   {
     id: 'vj-hero-1',
     src: vjHero1,
-    alt: 'Kerala scenic destination view 1',
+    alt: 'Keralam scenic destination view 1',
     label: 'Destination 1',
   },
   {
     id: 'vj-hero-2',
     src: vjHero2,
-    alt: 'Kerala scenic destination view 2',
+    alt: 'Keralam scenic destination view 2',
     label: 'Destination 2',
   },
   {
     id: 'vj-hero-3',
     src: vjHero3,
-    alt: 'Kerala scenic destination view 3',
+    alt: 'Keralam scenic destination view 3',
     label: 'Destination 3',
   },
   {
     id: 'vj-hero-4',
     src: vjHero4,
-    alt: 'Kerala scenic destination view 4',
+    alt: 'Keralam scenic destination view 4',
     label: 'Destination 4',
   },
   {
     id: 'vj-hero-5',
     src: vjHero5,
-    alt: 'Kerala scenic destination view 5',
+    alt: 'Keralam scenic destination view 5',
     label: 'Destination 5',
   },
 ] as const;
@@ -66,14 +66,6 @@ export default function HeroSection() {
     return () => window.clearInterval(timer);
   }, [isPaused]);
 
-  function handleNext() {
-    setActiveSlide((prev) => getNextSlideIndex(prev, HERO_SLIDES.length));
-  }
-
-  function handlePrev() {
-    setActiveSlide((prev) => getPrevSlideIndex(prev, HERO_SLIDES.length));
-  }
-
   return (
     <section id="hero" className="border-b border-[#E2DFD7] bg-[#F7F6F2]">
       <div className="mx-auto max-w-7xl px-0 pt-0 pb-12 lg:px-10 lg:pt-12 lg:pb-16">
@@ -85,7 +77,7 @@ export default function HeroSection() {
           onFocusCapture={() => setIsPaused(true)}
           onBlurCapture={() => setIsPaused(false)}
           aria-roledescription="carousel"
-          aria-label="Kerala travel destinations showcase"
+          aria-label="Keralam travel destinations showcase"
         >
           {/* Layered Background Slides */}
           <div className="absolute inset-0" aria-hidden="true">
@@ -121,37 +113,8 @@ export default function HeroSection() {
           </div>
 
           {/* Foreground Content */}
-          <div className="relative z-10 flex flex-col justify-center px-6 py-12 sm:px-10 sm:py-16 lg:min-h-[520px] lg:p-16">
+          <div className="relative z-10 flex flex-col justify-center px-6 py-16 sm:px-10 sm:py-24 lg:min-h-[620px] lg:py-24 lg:px-16">
             <div className="max-w-2xl">
-              {/* Carousel Controls Above Hero Text: Left Button | i/n | Right Button */}
-              <div className="mb-6 inline-flex items-center gap-3 sm:mb-7">
-                <button
-                  type="button"
-                  onClick={handlePrev}
-                  aria-label="Previous destination slide"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-white/30 bg-[#0B1410]/45 text-white transition-colors duration-150 hover:bg-white hover:text-[#141A17] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                >
-                  <ChevronLeft className="h-4 w-4" />
-                </button>
-
-                <span
-                  aria-live="polite"
-                  aria-label={`Slide ${activeSlide + 1} of ${HERO_SLIDES.length}`}
-                  className="min-w-[2.5rem] text-center font-display text-base font-medium tracking-wide text-white/95 tabular-nums"
-                >
-                  {formatSlideCounter(activeSlide, HERO_SLIDES.length)}
-                </span>
-
-                <button
-                  type="button"
-                  onClick={handleNext}
-                  aria-label="Next destination slide"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-white/30 bg-[#0B1410]/45 text-white transition-colors duration-150 hover:bg-white hover:text-[#141A17] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                >
-                  <ChevronRight className="h-4 w-4" />
-                </button>
-              </div>
-
               <h1 className="font-display text-[clamp(2.25rem,4.2vw,3.85rem)] font-semibold leading-[1.08] tracking-tight text-white [text-wrap:balance]">
                 {HERO_CONTENT.headline}
               </h1>

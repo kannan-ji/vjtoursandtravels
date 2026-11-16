@@ -5,6 +5,7 @@ import munnarTeaImg from '@/src/assets/images/cc_munnar_tea.jpg';
 import houseboatImg from '@/src/assets/images/cc_houseboat_backwaters.jpg';
 import waterfallsImg from '@/src/assets/images/cc_waterfalls_kerala.jpg';
 import jatayuImg from '@/src/assets/images/cc_jatayu_kerala.jpg';
+import { buildPackageWhatsAppUrl } from '@/lib/enquiry';
 import {
   PACKAGES_SECTION,
   TOUR_PACKAGES,
@@ -34,7 +35,6 @@ export default function PackagesSection() {
               {PACKAGES_SECTION.title}
             </h2>
           </div>
-          <p className="text-sm text-[#4E5953] sm:text-base">{PACKAGES_SECTION.subtitle}</p>
         </div>
 
         {/* Package Dossiers */}
@@ -117,8 +117,22 @@ export default function PackagesSection() {
                     </ul>
                   </div>
 
-                  <div className="mt-8 border-t border-[#E2DFD7] pt-5 text-xs leading-relaxed text-[#4E5953]">
-                    {PACKAGES_SECTION.guestNote}
+                  <div className="mt-8 border-t border-[#E2DFD7] pt-5">
+                    <p className="text-xs leading-relaxed text-[#4E5953]">
+                      {PACKAGES_SECTION.guestNote}
+                    </p>
+                    <a
+                      href={buildPackageWhatsAppUrl(pkg)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex min-h-[48px] w-full items-center justify-center gap-2.5 rounded-sm bg-[#0D6E4E] px-6 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#09543B] sm:w-fit whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D6E4E]"
+                    >
+                      <WhatsAppIcon className="h-4 w-4 shrink-0" />
+                      <span>
+                        Enquire on WhatsApp
+                        <span className="sr-only"> about {pkg.title}</span>
+                      </span>
+                    </a>
                   </div>
                 </div>
               </article>

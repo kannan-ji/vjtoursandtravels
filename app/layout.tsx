@@ -17,20 +17,20 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'VJ Tours and Travels | Kerala Cabs & Tour Operator Perumbavoor',
+  title: 'VJ Tours and Travels | Keralam Cabs & Tour Operator Perumbavoor',
   description:
-    'Trusted local tour operator and chauffeur service based in Perumbavoor, Kerala. Direct dispatch from Perumbavoor Hub, 15 mins from Cochin Airport (COK).',
+    'Trusted local tour operator and transport service based in Perumbavoor, Keralam. Direct dispatch from Perumbavoor Hub, 15 mins from Cochin Airport (COK).',
   openGraph: {
-    title: 'VJ Tours and Travels | Kerala Cabs & Tour Operator Perumbavoor',
+    title: 'VJ Tours and Travels | Keralam Cabs & Tour Operator Perumbavoor',
     description:
-      'Trusted local tour operator and chauffeur service based in Perumbavoor, Kerala. Direct dispatch from Perumbavoor Hub, 15 mins from Cochin Airport (COK).',
+      'Trusted local tour operator and transport service based in Perumbavoor, Keralam. Direct dispatch from Perumbavoor Hub, 15 mins from Cochin Airport (COK).',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VJ Tours and Travels | Kerala Cabs & Tour Operator Perumbavoor',
+    title: 'VJ Tours and Travels | Keralam Cabs & Tour Operator Perumbavoor',
     description:
-      'Trusted local tour operator and chauffeur service based in Perumbavoor, Kerala. Direct dispatch from Perumbavoor Hub, 15 mins from Cochin Airport (COK).',
+      'Trusted local tour operator and transport service based in Perumbavoor, Keralam. Direct dispatch from Perumbavoor Hub, 15 mins from Cochin Airport (COK).',
   },
 };
 

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  buildPackageWhatsAppUrl,
   buildWhatsAppEnquiryUrl,
   formatEnquiryMessage,
   normalizePhoneDigits,
@@ -34,12 +35,25 @@ test('buildWhatsAppEnquiryUrl encodes formatted message onto target WhatsApp num
   const values = {
     name: 'Ramesh Kumar',
     whatsapp: '+91 98765 43210',
-    message: 'Grand Kerala & Kanyakumari enquiry',
+    message: 'Grand Keralam & Kanyakumari enquiry',
   };
   const url = buildWhatsAppEnquiryUrl(values);
   assert.ok(url.startsWith('https://wa.me/917025304620?text='));
   const decoded = decodeURIComponent(url.split('?text=')[1]);
   assert.equal(decoded, formatEnquiryMessage(values));
+});
+
+test('buildPackageWhatsAppUrl pre-fills selected package details onto owner WhatsApp', () => {
+  const classicUrl = buildPackageWhatsAppUrl(TOUR_PACKAGES[0]);
+  assert.ok(classicUrl.startsWith('https://wa.me/917025304620?text='));
+  const classicDecoded = decodeURIComponent(classicUrl.split('?text=')[1]);
+  assert.ok(classicDecoded.includes('Classic Munnar & Backwaters'));
+  assert.ok(classicDecoded.includes('550 km'));
+
+  const grandUrl = buildPackageWhatsAppUrl(TOUR_PACKAGES[1]);
+  const grandDecoded = decodeURIComponent(grandUrl.split('?text=')[1]);
+  assert.ok(grandDecoded.includes('Grand Keralam & Kanyakumari'));
+  assert.ok(grandDecoded.includes('1,300 km'));
 });
 
 test('fleet contains only WagonR and Ertiga and packages include 550 km and 1,300 km', () => {

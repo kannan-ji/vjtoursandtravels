@@ -10,7 +10,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="relative md:sticky md:top-0 z-40 border-b border-[#E2DFD7] bg-[#F7F6F2]/95 backdrop-blur-sm">
+    <header className="relative lg:sticky lg:top-0 z-40 border-b border-[#E2DFD7] bg-[#F7F6F2]/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-6 py-4 lg:px-10">
         {/* Zone 1: Single-line Brand Wordmark */}
         <SectionLink
@@ -21,7 +21,7 @@ export default function Navbar() {
         </SectionLink>
 
         {/* Zone 2: 4 Clean Single-Line Navigation Links */}
-        <nav aria-label="Primary Navigation" className="hidden md:flex items-center gap-7">
+        <nav aria-label="Primary Navigation" className="hidden lg:flex items-center gap-7">
           {NAV_LINKS.map((link) => (
             <SectionLink
               key={link.href}
@@ -33,7 +33,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Zone 3: Single Primary Action + Mobile Menu Trigger */}
+        {/* Zone 3: Single Primary Action + Mobile/Tablet Menu Trigger */}
         <div className="flex items-center gap-3 shrink-0">
           <a
             href={WHATSAPP_LINKS.headerContact}
@@ -51,7 +51,7 @@ export default function Navbar() {
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation-drawer"
             aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#D8D4CA] bg-white text-[#141A17] transition-colors hover:bg-[#ECEAE3] md:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D6E4E]"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#D8D4CA] bg-white text-[#141A17] transition-colors hover:bg-[#ECEAE3] lg:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D6E4E]"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -62,7 +62,7 @@ export default function Navbar() {
         <nav
           id="mobile-navigation-drawer"
           aria-label="Mobile Navigation"
-          className="border-t border-[#E2DFD7] bg-[#F7F6F2] px-6 py-4 md:hidden"
+          className="border-t border-[#E2DFD7] bg-[#F7F6F2] px-6 py-4 lg:hidden"
         >
           <ul className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
@@ -76,7 +76,7 @@ export default function Navbar() {
                 </SectionLink>
               </li>
             ))}
-            <li className="pt-3">
+            <li className="pt-3 sm:hidden">
               <a
                 href={WHATSAPP_LINKS.headerContact}
                 target="_blank"
