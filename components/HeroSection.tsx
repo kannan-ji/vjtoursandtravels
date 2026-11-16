@@ -47,7 +47,7 @@ const HERO_SLIDES = [
   },
 ] as const;
 
-const SLIDE_INTERVAL_MS = 5500;
+const SLIDE_INTERVAL_MS = 2500;
 
 export default function HeroSection() {
   const [activeSlide, setActiveSlide] = useState(0);

@@ -25,7 +25,7 @@ test('validateEnquiryForm accepts valid enquiry values', () => {
   const result = validateEnquiryForm({
     name: 'Ramesh Kumar',
     whatsapp: '+91 98765 43210',
-    message: 'Classic Munnar & Backwaters 5 Days / 4 Nights enquiry',
+    message: '5 Days / 4 Nights Kochi to Munnar & Alleppey enquiry',
   });
   assert.equal(result.valid, true);
   assert.deepEqual(result.errors, {});
@@ -35,7 +35,7 @@ test('buildWhatsAppEnquiryUrl encodes formatted message onto target WhatsApp num
   const values = {
     name: 'Ramesh Kumar',
     whatsapp: '+91 98765 43210',
-    message: 'Grand Keralam & Kanyakumari enquiry',
+    message: '9 Days / 8 Nights Keralam & Kanyakumari enquiry',
   };
   const url = buildWhatsAppEnquiryUrl(values);
   assert.ok(url.startsWith('https://wa.me/917025304620?text='));
@@ -47,12 +47,12 @@ test('buildPackageWhatsAppUrl pre-fills selected package details onto owner What
   const classicUrl = buildPackageWhatsAppUrl(TOUR_PACKAGES[0]);
   assert.ok(classicUrl.startsWith('https://wa.me/917025304620?text='));
   const classicDecoded = decodeURIComponent(classicUrl.split('?text=')[1]);
-  assert.ok(classicDecoded.includes('Classic Munnar & Backwaters'));
+  assert.ok(classicDecoded.includes(TOUR_PACKAGES[0].route));
   assert.ok(classicDecoded.includes('550 km'));
 
   const grandUrl = buildPackageWhatsAppUrl(TOUR_PACKAGES[1]);
   const grandDecoded = decodeURIComponent(grandUrl.split('?text=')[1]);
-  assert.ok(grandDecoded.includes('Grand Keralam & Kanyakumari'));
+  assert.ok(grandDecoded.includes(TOUR_PACKAGES[1].route));
   assert.ok(grandDecoded.includes('1,300 km'));
 });
 

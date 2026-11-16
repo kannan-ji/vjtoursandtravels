@@ -68,11 +68,11 @@ export function buildWhatsAppEnquiryUrl(
 }
 
 export function buildPackageWhatsAppUrl(
-  pkg: Pick<TourPackage, 'title' | 'duration' | 'distanceKm' | 'route'>,
+  pkg: Pick<TourPackage, 'duration' | 'distanceKm' | 'route'>,
   targetNumber: string = WHATSAPP_NUMBER,
 ): string {
   const text = encodeURIComponent(
-    `Hello VJ Tours and Travels, I would like to enquire about the ${pkg.title} package (${pkg.duration}, ${pkg.distanceKm} — ${pkg.route}).`,
+    `Hello VJ Tours and Travels, I would like to enquire about the ${pkg.duration} (${pkg.distanceKm}) package: ${pkg.route}.`,
   );
   return `https://wa.me/${targetNumber}?text=${text}`;
 }

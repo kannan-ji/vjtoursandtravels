@@ -9,7 +9,6 @@ export interface TourPackage {
   duration: string;
   distanceKm: string;
   route: string;
-  title: string;
   highlights: string[];
   photos: [PackagePhoto, PackagePhoto];
 }
@@ -86,7 +85,6 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '5 Days / 4 Nights',
     distanceKm: '550 km',
     route: 'Kochi (1D) → Munnar (2D) → Thekkady (1D) → Alleppey (1D) → Kochi drop',
-    title: 'Classic Munnar & Backwaters',
     highlights: [
       'Private AC transport vehicle covering 550 km across the circuit',
       'Kochi arrival sightseeing & Munnar (2D) tea estates, Mattupetty & viewpoints',
@@ -113,7 +111,6 @@ export const TOUR_PACKAGES: TourPackage[] = [
     distanceKm: '1,300 km',
     route:
       'Kochi (1D) → Munnar (2D) → Thekkady (1D) → Alleppey (1D) → Jatayu & Varkala (2D) → Kovalam & Kanyakumari (2D) → Kochi drop',
-    title: 'Grand Keralam & Kanyakumari',
     highlights: [
       'Private AC transport vehicle covering the 1,300 km grand circuit',
       'Kochi (1D), Munnar (2D) tea valleys & waterfalls, Thekkady (1D) & Alleppey (1D)',

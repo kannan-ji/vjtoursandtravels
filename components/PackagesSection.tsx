@@ -1,6 +1,6 @@
 'use client';
 
-import { Check, MapPin } from 'lucide-react';
+import { Check } from 'lucide-react';
 import munnarTeaImg from '@/src/assets/images/cc_munnar_tea.jpg';
 import houseboatImg from '@/src/assets/images/cc_houseboat_backwaters.jpg';
 import waterfallsImg from '@/src/assets/images/cc_waterfalls_kerala.jpg';
@@ -92,14 +92,9 @@ export default function PackagesSection() {
                       <span className="text-[#B47B2B]">{pkg.distanceKm}</span>
                     </div>
 
-                    <h3 className="font-display mt-3 text-2xl font-semibold tracking-tight text-[#141A17] sm:text-3xl [text-wrap:balance]">
-                      {pkg.title}
+                    <h3 className="font-display mt-3 text-xl font-semibold leading-snug tracking-tight text-[#141A17] sm:text-2xl [text-wrap:balance]">
+                      {pkg.route}
                     </h3>
-
-                    <p className="mt-4 flex items-start gap-2.5 text-sm font-medium leading-relaxed text-[#2D3631]">
-                      <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#0D6E4E]" />
-                      <span>{pkg.route}</span>
-                    </p>
 
                     <ul className="mt-6 space-y-3 border-t border-[#E2DFD7] pt-6">
                       {pkg.highlights.map((item) => (
@@ -130,7 +125,7 @@ export default function PackagesSection() {
                       <WhatsAppIcon className="h-4 w-4 shrink-0" />
                       <span>
                         Enquire on WhatsApp
-                        <span className="sr-only"> about {pkg.title}</span>
+                        <span className="sr-only"> about {pkg.route}</span>
                       </span>
                     </a>
                   </div>
