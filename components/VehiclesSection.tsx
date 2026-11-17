@@ -23,10 +23,7 @@ export default function VehiclesSection() {
         {/* Editorial Section Header */}
         <div className="flex flex-col gap-4 border-b border-[#D8D4CA] pb-8 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="font-display text-sm font-semibold tracking-wide text-[#0D6E4E] tabular-nums">
-              02
-            </p>
-            <h2 className="font-display mt-1 text-3xl font-semibold tracking-tight text-[#141A17] sm:text-4xl [text-wrap:balance]">
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-[#141A17] sm:text-4xl [text-wrap:balance]">
               {VEHICLES_SECTION.title}
             </h2>
           </div>
@@ -95,7 +92,7 @@ export default function VehiclesSection() {
             href={WHATSAPP_LINKS.customVehicle}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[48px] items-center justify-center gap-2.5 rounded-sm bg-[#0D6E4E] px-6 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#09543B] whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D6E4E]"
+            className="inline-flex min-h-[48px] items-center justify-center gap-2.5 rounded-sm border-[1.5px] border-[#0D6E4E] bg-transparent px-6 py-3 text-sm font-semibold text-[#0D6E4E] transition-colors duration-150 hover:bg-[#0D6E4E] hover:text-white whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D6E4E]"
           >
             <WhatsAppIcon className="h-4 w-4 shrink-0" />
             <span>{VEHICLES_SECTION.customCalloutCta}</span>

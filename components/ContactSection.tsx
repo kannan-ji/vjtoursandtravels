@@ -52,10 +52,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left Column: Direct Dispatch Hub Details */}
           <div className="lg:col-span-5">
-            <p className="font-display text-sm font-semibold tracking-wide text-[#0D6E4E] tabular-nums">
-              04
-            </p>
-            <h2 className="font-display mt-1 text-3xl font-semibold tracking-tight text-[#141A17] sm:text-4xl [text-wrap:balance]">
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-[#141A17] sm:text-4xl [text-wrap:balance]">
               {CONTACT_INFO.heading}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[#4E5953]">

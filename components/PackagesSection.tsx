@@ -28,10 +28,7 @@ export default function PackagesSection() {
         {/* Editorial Section Header */}
         <div className="flex flex-col gap-4 border-b border-[#E2DFD7] pb-8 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="font-display text-sm font-semibold tracking-wide text-[#0D6E4E] tabular-nums">
-              01
-            </p>
-            <h2 className="font-display mt-1 text-3xl font-semibold tracking-tight text-[#141A17] sm:text-4xl [text-wrap:balance]">
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-[#141A17] sm:text-4xl [text-wrap:balance]">
               {PACKAGES_SECTION.title}
             </h2>
           </div>
@@ -120,7 +117,7 @@ export default function PackagesSection() {
                       href={buildPackageWhatsAppUrl(pkg)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-5 inline-flex min-h-[48px] w-full items-center justify-center gap-2.5 rounded-sm bg-[#0D6E4E] px-6 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#09543B] sm:w-fit whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D6E4E]"
+                      className="mt-5 inline-flex min-h-[48px] w-full items-center justify-center gap-2.5 rounded-sm border-[1.5px] border-[#0D6E4E] bg-transparent px-6 py-3 text-sm font-semibold text-[#0D6E4E] transition-colors duration-150 hover:bg-[#0D6E4E] hover:text-white sm:w-fit whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0D6E4E]"
                     >
                       <WhatsAppIcon className="h-4 w-4 shrink-0" />
                       <span>
@@ -150,7 +147,7 @@ export default function PackagesSection() {
             href={WHATSAPP_LINKS.customPackage}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[48px] items-center justify-center gap-2.5 rounded-sm bg-[#0D6E4E] px-6 py-3 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#118962] whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            className="inline-flex min-h-[48px] items-center justify-center gap-2.5 rounded-sm border-[1.5px] border-[#2AD493] bg-transparent px-6 py-3 text-sm font-semibold text-[#2AD493] transition-colors duration-150 hover:border-[#0D6E4E] hover:bg-[#0D6E4E] hover:text-white whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             <WhatsAppIcon className="h-4 w-4 shrink-0" />
             <span>{PACKAGES_SECTION.customCalloutCta}</span>

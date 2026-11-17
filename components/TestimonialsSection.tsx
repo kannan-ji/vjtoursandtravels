@@ -11,10 +11,7 @@ export default function TestimonialsSection() {
         {/* Editorial Header */}
         <div className="flex flex-col gap-4 border-b border-white/15 pb-8 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="font-display text-sm font-semibold tracking-wide text-[#D4A359] tabular-nums">
-              03
-            </p>
-            <h2 className="font-display mt-1 text-3xl font-semibold tracking-tight text-white sm:text-4xl [text-wrap:balance]">
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl [text-wrap:balance]">
               {TESTIMONIALS_SECTION.title}
             </h2>
           </div>
